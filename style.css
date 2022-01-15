@@ -33,7 +33,7 @@ p {
 }
 
 .nav {
-  margin-top: 25px;
+  margin-top: 40px;
   width: 1000px;
   padding: 20px;
   display: flex;
@@ -47,6 +47,7 @@ p {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 
 .logo {
@@ -62,6 +63,8 @@ p {
 .link {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-right: 40px;
 }
 
@@ -73,22 +76,40 @@ p {
 .link li:first-child {
   background-color: #fff;
   border-radius: 20px;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* .link a:hover {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
 .main {
-  padding: 100px;
+  padding: 90px;
   width: 1400px;
+  height: 650px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  overflow: hidden;
   z-index: 10;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: -50px;
+  z-index: 5;
 }
 
 .text-container {
@@ -104,6 +125,13 @@ p {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  left: -150px;
+  height: 350px;
+}
+
+.text-container h1 {
+  font-size: 2.5rem;
 }
 
 .text-container a {
@@ -116,11 +144,28 @@ p {
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
 }
 
+.character {
+  animation: motion 1s linear 0s infinite alternate;
+  margin-top: 0;
+  z-index: 1000;
+}
+
+@keyframes motion {
+  0% {
+    margin-top: -10px;
+  }
+  100% {
+    margin-top: 100px;
+  }
+}
+
 .sci {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  right: -120px;
 }
 
 .sci a {
@@ -134,4 +179,11 @@ p {
   justify-content: center;
   align-items: center;
   margin: 5px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  position: relative;
+  top: -120px;
+  left: -440px;
 }
