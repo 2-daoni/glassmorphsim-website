@@ -40,7 +40,8 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   overflow: hidden;
   z-index: 10;
@@ -69,29 +70,17 @@ p {
 }
 
 .link a {
-  padding: 20px;
+  padding: 8px 15px;
   font-weight: 500;
+  border-radius: 25px;
+  margin: 10px;
 }
 
-.link li:first-child {
-  background-color: #fff;
-  border-radius: 20px;
-  width: 80px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.link a.highlight,
+.link a:hover {
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-
-/* .link a:hover {
-  background-color: #fff;
-  border-radius: 20px;
-  width: 80px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .main {
   padding: 90px;
