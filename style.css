@@ -90,7 +90,9 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+
   border-radius: 20px;
   z-index: 10;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -102,25 +104,32 @@ p {
 }
 
 .text-container {
-  padding: 30px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.3);
+  /* backdrop-filter: blur(10px); */
   border-radius: 20px;
   overflow: hidden;
   z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
   position: relative;
   left: -150px;
   height: 350px;
+  max-width: 700px;
 }
 
 .text-container h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.text-container p {
+  font-size: 1.1rem;
+  margin-top: 10px;
 }
 
 .text-container a {
@@ -131,6 +140,7 @@ p {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
 }
 
 .character {
@@ -175,4 +185,5 @@ p {
   position: relative;
   top: -120px;
   left: -440px;
+  z-index: 10000;
 }
